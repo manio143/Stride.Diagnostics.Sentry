@@ -1,0 +1,39 @@
+!SceneAsset
+Id: 47c91c3d-a59d-4092-a5ff-c40aa1b4f3c9
+SerializedVersion: {Stride: 3.1.0.1}
+Tags: []
+ChildrenIds: []
+Offset: {X: 0.0, Y: 0.0, Z: 0.0}
+Hierarchy:
+    RootParts:
+        - ref!! 1ee77c8c-b0a1-4dd6-adec-94ea1234a55f
+        - ref!! b21e0d81-b0b2-4812-84d4-2a75ad8c56ba
+    Parts:
+        -   Entity:
+                Id: 1ee77c8c-b0a1-4dd6-adec-94ea1234a55f
+                Name: Entity
+                Components:
+                    17b0e74ce5ffb1c8dee6d4562a50022c: !TransformComponent
+                        Id: ce8dc211-b716-41ab-b94b-7f9ebf170578
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    d84860cfe47a5001b9bb98ac37d76d6b: !ThrowingScript
+                        Id: 94d94bde-9181-4349-8103-87dedc987bee
+                        Priority: 0
+        -   Entity:
+                Id: b21e0d81-b0b2-4812-84d4-2a75ad8c56ba
+                Name: Camera
+                Components:
+                    02317484188cfeb6c7947d009983bfdc: !TransformComponent
+                        Id: a3db2f6b-5a16-4741-b502-dd40c2047f31
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    8ce1562b5a83f01041fa037afeae2dbc: !CameraComponent
+                        Id: 3ca5f64a-b275-47c8-b4ee-ac2fabe2822e
+                        Name: Main
+                        Projection: Perspective
+                        Slot: 4e7dc705-f08e-4fa9-a7bb-dc98a1578664

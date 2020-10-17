@@ -1,0 +1,4 @@
+!AppSettings
+Settings:
+    - !SentryConfig
+        Endpoint: "<your endpoint>"

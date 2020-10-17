@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+    <OutputType>WinExe</OutputType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Update="Example.appsettings">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Stride.Diagnostics.Sentry\Stride.Diagnostics.Sentry.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Stride.Core.Design" Version="4.0.0.1-beta04" />
+    <PackageReference Include="Stride.Graphics" Version="4.0.0.1-beta04" />
+    <PackageReference Include="Stride.Engine" Version="4.0.0.1-beta04" />
+    <PackageReference Include="Stride.Core.Assets.CompilerApp" Version="4.0.0.1-beta04" IncludeAssets="build;buildTransitive" />
+  </ItemGroup>
+</Project>
