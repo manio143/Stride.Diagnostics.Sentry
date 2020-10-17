@@ -1,3 +1,4 @@
+using System.Linq;
 using System.Reflection;
 using System.Runtime.InteropServices;
 using Sentry;
@@ -29,13 +30,15 @@ namespace Stride.Diagnostics.Sentry
         {
             var assembly = Assembly.GetEntryAssembly();
             var fullVersionAttr = assembly.GetCustomAttribute<AssemblyInformationalVersionAttribute>();
-            var versionAttr = assembly.GetCustomAttribute<AssemblyVersionAttribute>();
+            var hash = assembly.GetCustomAttributes<AssemblyMetadataAttribute>()
+                .FirstOrDefault(attr => attr.Key == "GitHash")
+                ?.Value;
 
             var strideAssembly = typeof(GameBase).Assembly;
             var strideVersion = strideAssembly.GetCustomAttribute<AssemblyInformationalVersionAttribute>()
                 .InformationalVersion;
 
-            var version = fullVersionAttr?.InformationalVersion ?? versionAttr?.Version;
+            var version = $"{fullVersionAttr.InformationalVersion}-{hash}";
             return $"{version} (Stride: {strideVersion})";
         }
     }
